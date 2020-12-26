@@ -1,0 +1,16 @@
+title 0.5 single page app
+
+browser->server: HTTP GET: /spa
+server->browser: HTML
+browser->server: HTTP GET: /main.css
+server->browser: main.css
+browser->server: HTTP GET: /spa.js
+server->browser: spa.js
+browser->server: HTTP GET: /data.json
+server->browser: data.json
+
+note over browser
+onreadystatechange:
+1. notes = JSON.parse(this.responseText)
+2. redrawNotes()
+	

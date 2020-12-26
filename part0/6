@@ -1,0 +1,12 @@
+title 0.6 new note
+
+note over browser:
+redrawNotes()
+end note
+
+browser->server: HTTP POST: /new_note_spa; with first element of form (e.target.elements[0].value)
+server->browser: status 201 (created)
+
+note over browser:
+console.log( response from server: '{"message":"note created"}') 
+end note

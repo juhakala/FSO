@@ -1,0 +1,13 @@
+title 0.4 new note
+
+browser->server: HTTP POST: /new_note
+server->browser: HTTP status code 302 (URL redirect)
+browser->server: HTTP GET: /notes
+server->browser: HTML
+browser->server: HTTP GET: /main.css
+server->browser: main.css
+browser->server: HTTP GET: /main.js
+server->browser: main.js
+browser->server: HTTP GET: /data.json
+server->browser: data.json
+	
