@@ -24,12 +24,14 @@ const Statistics = ({good, neutral, bad, all}) => {
 	} else {
 		return (
 			<table>
-				<Statistic name='Good' value={good} />
-				<Statistic name='Neutral' value={neutral} />
-				<Statistic name='Bad' value={bad} />
-				<Statistic name='All' value={all} />
-				<Statistic name='Avarage' value={(good - bad) / all} />
-				<Statistic name='Positive' value={good / all * 100 + " %"} />
+				<tbody>
+					<Statistic name='Good' value={good} />
+					<Statistic name='Neutral' value={neutral} />
+					<Statistic name='Bad' value={bad} />
+					<Statistic name='All' value={all} />
+					<Statistic name='Avarage' value={(good - bad) / all} />
+					<Statistic name='Positive' value={good / all * 100 + " %"} />
+				</tbody>
 			</table>
 		)
 	}
